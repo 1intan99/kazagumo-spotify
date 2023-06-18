@@ -41,7 +41,7 @@
   "devDependencies": {
     "@types/node": "^18.11.19",
     "@types/ws": "^8.5.3",
-    "discord.js": "^14.7.1",
+    "discord.js": "^14.11.0",
     "node-abort-controller": "^3.0.1",
     "prettier": "^2.6.2",
     "tslint": "^6.1.3",

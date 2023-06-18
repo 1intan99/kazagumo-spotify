@@ -9,7 +9,7 @@ import {
 } from 'kazagumo';
 import { RequestManager } from './RequestManager';
 
-const REGEX = /(?:https:\/\/open\.spotify\.com\/|spotify:)(?:.+)?(track|playlist|album|artist)[\/:]([A-Za-z0-9]+)/;
+const REGEX = /(?:https:\/\/open\.spotify\.com\/|spotify:)(?:.+)?(track|playlist|album|artist|episode|show)[\/:]([A-Za-z0-9]+)/;
 
 export interface SpotifyOptions {
   /** The client ID of your Spotify application. */
@@ -35,7 +35,6 @@ export class KazagumoPlugin extends Plugin {
   public options: SpotifyOptions;
 
   private _search: ((query: string, options?: KazagumoSearchOptions) => Promise<KazagumoSearchResult>) | null;
-  private token: string = '';
   private kazagumo: Kazagumo | null;
 
   private readonly methods: Record<string, (id: string, requester: unknown) => Promise<Result>>;
